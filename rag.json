@@ -1,7 +1,17 @@
 [
   {
     "rank": 1,
-    "score": 0.6257710456848145,
-    "text": "[example.c] void selection_sort(int* arr, int size){\n    for(int i=0; i<size-1; i++){\n        int min_pos = i;\n        for(int j=i+1; j<size; j++){\n            if(arr[j] < arr[min_pos])\n                min_pos = j;\n        }\n        //swap\n        int tmp = arr[min_pos];\n        arr[min_pos] = arr[i];\n        arr[i] = tmp;\n    }\n}"
+    "score": 0.25438302755355835,
+    "text": "[example.c] void bubble_sort(int* arr, int size){\n    size--;\n    while(size){\n        for(int i=0, j=i+1; i<size, j<=size; i++, j++){\n            //swap\n            if(arr[i] > arr[j]){\n                int tmp = arr[i];\n                arr[i] = arr[j];\n                arr[j] = tmp;\n            }\n        }\n        size--;\n    }\n}"
+  },
+  {
+    "rank": 2,
+    "score": 0.24297240376472473,
+    "text": "[example.c] //return the position of pivot\n    return left_end+1;\n}\nvoid quick_sort(int* arr, int front, int end){\n    //boundary\n    if(!arr)\n        return;"
+  },
+  {
+    "rank": 3,
+    "score": 0.21315622329711914,
+    "text": "[example.c] //main\n    if(front < end){\n        int pivot = Partition(arr, front, end);\n        quick_sort(arr, front, pivot-1);\n        quick_sort(arr, pivot+1, end);\n    }\n}"
   }
 ]

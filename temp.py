@@ -1,29 +1,31 @@
-def selection_sort(arr):
+def factorial(n):
     """
-    Sorts the input array using the selection sort algorithm.
+    Calculates the factorial of a given number.
 
     Args:
-        arr (list): The input array to be sorted.
+        n (int): The number for which the factorial is to be calculated.
 
     Returns:
-        list: The sorted array.
+        int: The factorial of the given number.
+
+    Raises:
+        ValueError: If the input is not an integer.
+
+    Examples:
+        >>> factorial(0)
+        1
+        >>> factorial(5)
+        120
+        >>> factorial(-1)
+        ValueError: Negative numbers are not allowed.
     """
-    for i in range(len(arr) - 1):
-        """
-        Find the minimum element in the unsorted portion of the array.
-        """
-        min_pos = i
-        for j in range(i + 1, len(arr)):
-            """
-            Compare the current element with the minimum element.
-            """
-            if arr[j] < arr[min_pos]:
-                """
-                Update the minimum element index if the current element is smaller.
-                """
-                min_pos = j
-        """
-        Swap the minimum element with the first element of the unsorted portion.
-        """
-        arr[i], arr[min_pos] = arr[min_pos], arr[i]
-    return arr
+    if not isinstance(n, int):
+        raise ValueError("Input must be an integer.")
+    if n < 0:
+        raise ValueError("Negative numbers are not allowed.")
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print(factorial(10))
