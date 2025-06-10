@@ -32,13 +32,12 @@
    - 安裝 CUDA Toolkit v12.6，不需移除  
    - 安裝 VS 2022 Build Tools（含 C++ / CMake）  
    - 編譯並安裝 GPU 版 `llama-cpp-python`：
-     ```powershell
-     pip uninstall -y llama-cpp-python
-     set LLAMA_CUBLAS=1
-     set CMAKE_ARGS=-DLLAMA_CUDA=on -DLLAMA_CUDA_ARCHS=89 ^
-                    -DLLAMA_BUILD_EXAMPLES=OFF -DLLAMA_BUILD_TESTS=OFF ^
-                    -DLLAMA_BUILD_COMMON=OFF -DLLAMA_BUILD_LLAVA=OFF
-     pip install --no-binary :all: llama-cpp-python==0.3.9
+     ```PowerShell
+      $env:CUDA_TOOLKIT_ROOT_DIR="C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6"
+      $env:CMAKE_GENERATOR_PLATFORM="x64"
+      $env:FORCE_CMAKE="1"
+      $env:CMAKE_ARGS="-DGGML_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=89"
+      pip install llama-cpp-python --no-cache-dir --force-reinstall --upgrade
      ```
    - 測試 GPU：
      ```python
