@@ -1,31 +1,22 @@
-def factorial(n):
+def quicksort(arr):
     """
-    Calculates the factorial of a given number.
+    Sorts an array of integers using the quicksort algorithm.
 
     Args:
-        n (int): The number for which the factorial is to be calculated.
+        arr (list): The array of integers to be sorted.
 
     Returns:
-        int: The factorial of the given number.
-
-    Raises:
-        ValueError: If the input is not an integer.
-
-    Examples:
-        >>> factorial(0)
-        1
-        >>> factorial(5)
-        120
-        >>> factorial(-1)
-        ValueError: Negative numbers are not allowed.
+        list: The sorted array of integers.
     """
-    if not isinstance(n, int):
-        raise ValueError("Input must be an integer.")
-    if n < 0:
-        raise ValueError("Negative numbers are not allowed.")
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n-1)
+    if len(arr) <= 1:
+        return arr
 
-print(factorial(10))
+    pivot = arr[0]
+    less = [x for x in arr[1:] if x <= pivot]
+    greater = [x for x in arr[1:] if x > pivot]
+
+    return quicksort(less) + [pivot] + quicksort(greater)
+
+# Test the quicksort function
+arr = [3, 2, 1, 4, 5, 6]
+print(quicksort(arr))

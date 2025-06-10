@@ -195,3 +195,5 @@ cython_debug/
 
 llama-b5608-bin-win-cuda-12.4-x64
 models
+.vs
+.vscode

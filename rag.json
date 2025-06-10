@@ -1,17 +1,5 @@
 [
-  {
-    "rank": 1,
-    "score": 0.25438302755355835,
-    "text": "[example.c] void bubble_sort(int* arr, int size){\n    size--;\n    while(size){\n        for(int i=0, j=i+1; i<size, j<=size; i++, j++){\n            //swap\n            if(arr[i] > arr[j]){\n                int tmp = arr[i];\n                arr[i] = arr[j];\n                arr[j] = tmp;\n            }\n        }\n        size--;\n    }\n}"
-  },
-  {
-    "rank": 2,
-    "score": 0.24297240376472473,
-    "text": "[example.c] //return the position of pivot\n    return left_end+1;\n}\nvoid quick_sort(int* arr, int front, int end){\n    //boundary\n    if(!arr)\n        return;"
-  },
-  {
-    "rank": 3,
-    "score": 0.21315622329711914,
-    "text": "[example.c] //main\n    if(front < end){\n        int pivot = Partition(arr, front, end);\n        quick_sort(arr, front, pivot-1);\n        quick_sort(arr, pivot+1, end);\n    }\n}"
-  }
+  "[example.c] //return the position of pivot\n    return left_end+1;\n}\nvoid quick_sort(int* arr, int front, int end){\n    //boundary\n    if(!arr)\n        return;",
+  "[example.c] //main\n    if(front < end){\n        int pivot = Partition(arr, front, end);\n        quick_sort(arr, front, pivot-1);\n        quick_sort(arr, pivot+1, end);\n    }\n}",
+  "[example.pdf] sort conventions.\nA number of tools in Python accept key functions to control how elements are ordered or grouped.\nThey include min(), max(), sorted(), list.sort(), heapq.merge(), heapq.nsmallest(), heapq.\nnlargest(), and itertools.groupby().\nThere are several ways to create a key function. For example. the str.lower() method can serve\nas a key function for case insensitive sorts. Alternatively, a key function can be built from a lambda"
 ]
