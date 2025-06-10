@@ -192,3 +192,6 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+llama-b5608-bin-win-cuda-12.4-x64
+models

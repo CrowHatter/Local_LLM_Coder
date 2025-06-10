@@ -1,0 +1,7 @@
+[
+  {
+    "rank": 1,
+    "score": 0.6257710456848145,
+    "text": "[example.c] void selection_sort(int* arr, int size){\n    for(int i=0; i<size-1; i++){\n        int min_pos = i;\n        for(int j=i+1; j<size; j++){\n            if(arr[j] < arr[min_pos])\n                min_pos = j;\n        }\n        //swap\n        int tmp = arr[min_pos];\n        arr[min_pos] = arr[i];\n        arr[i] = tmp;\n    }\n}"
+  }
+]
